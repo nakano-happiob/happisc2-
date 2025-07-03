@@ -5,9 +5,15 @@ export default function Footer() {
     <footer style={{
       background: 'var(--bg-dark)',
       color: 'white',
-      padding: '4rem 0 2rem'
+      padding: '4rem 0 3rem',
+      minHeight: '200px'
     }}>
-      <div className="container">
+      <div className="container" style={{
+        maxWidth: '1600px',
+        margin: '0 auto',
+        padding: '0 4rem',
+        marginBottom: '3rem'
+      }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',

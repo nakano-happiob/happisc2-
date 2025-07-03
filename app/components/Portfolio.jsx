@@ -1,5 +1,8 @@
 'use client';
 
+import React, { useRef } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+
 export default function Portfolio() {
   const portfolioExamples = [
     {
@@ -28,9 +31,22 @@ export default function Portfolio() {
     }
   ];
 
+  const sectionRef = useRef(null);
+  const isVisible = useScrollAnimation(sectionRef);
+
   return (
-    <section id="portfolio" className="section section-light">
-      <div className="container">
+    <section
+      id="portfolio"
+      ref={sectionRef}
+      className={`section section-light${isVisible ? ' animate-fade-in' : ''}`}
+      style={{ padding: '8rem 0' }}
+    >
+      <div className="container" style={{
+        maxWidth: '1600px',
+        margin: '0 auto',
+        padding: '0 4rem',
+        marginBottom: '5rem'
+      }}>
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -63,6 +79,7 @@ export default function Portfolio() {
         }}>
           {portfolioExamples.map((example, index) => (
             <div key={index} className="card animate-fade-in" style={{
+              minHeight: '400px',
               animationDelay: `${index * 0.1}s`
             }}>
               {/* 画像プレースホルダー */}
@@ -71,7 +88,6 @@ export default function Portfolio() {
                 height: '200px',
                 marginBottom: '1.5rem'
               }} />
-              
               <h3 style={{
                 fontSize: '1.25rem',
                 marginBottom: '1rem',
@@ -81,7 +97,6 @@ export default function Portfolio() {
               }}>
                 {example.title}
               </h3>
-              
               <p style={{
                 color: 'var(--text-secondary)',
                 lineHeight: '1.6',
@@ -93,28 +108,7 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-
-        <div style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          textAlign: 'center'
-        }}>
-          <div className="card card-gradient animate-fade-in" style={{
-            animationDelay: '0.6s'
-          }}>
-            <p style={{
-              fontSize: '1.25rem',
-              color: 'var(--text-primary)',
-              fontWeight: '600',
-              marginBottom: '1rem',
-              lineHeight: '1.6'
-            }}>
-              こうした「学習歴の見える化」が、<br />
-              あなたの"これから"を広げる新しい名刺になります。
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
-} 
+}

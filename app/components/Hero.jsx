@@ -27,97 +27,130 @@ const animations = {
 export default function Hero() {
   const heroInfo = [
     {
-      icon: '✔',
-      text: '3ヶ月プログラム'
+      // icon: '✔',
+      text: 'プログラム期間３ヶ月'
     },
     {
-      icon: '✔',
+      // icon: '✔',
       text: 'オンライン・対面ハイブリッド'
     }
   ];
 
   return (
-    <section style={{
-      position: 'relative',
-      height: '100vh',
-      minHeight: '600px',
+    <section className="section" style={{
+      paddingTop: '10rem',
+      paddingBottom: '6rem',
+      minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      overflow: 'hidden'
+      position: 'relative'
     }}>
-      {/* 背景画像 */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundImage: 'url(/images/workshop1.jpeg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        filter: 'brightness(0.8)'
-      }} />
-
-      {/* 半透明オーバーレイ */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'linear-gradient(45deg, rgba(255,229,236,0.9), rgba(229,241,255,0.9))',
-        backdropFilter: 'blur(4px)'
-      }} />
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{
-          maxWidth: '800px',
-          margin: '0 auto',
-          textAlign: 'center',
-          padding: '2rem'
-        }}>
+      <div className="container" style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '4rem',
+        alignItems: 'center',
+        maxWidth: '1600px',
+        margin: '0 auto',
+        padding: '0 4rem'
+      }}>
+        {/* 左側：テキストコンテンツ */}
+        <div className="animate-fade-in">
           <h1 style={{
-            marginBottom: '2rem',
-            color: 'var(--text-primary)',
-            fontWeight: '800',
+            marginBottom: '1.5rem',
             lineHeight: '1.2'
           }}>
-            学歴より、"学習歴"。<br />
-            未来を変える新しい学びを、
-            <span style={{ color: 'var(--accent-pink)' }}>あなたに。</span>
+            学歴より、"学習歴"<br />
+            未来を変える、新しい学び方<br />
+            <span style={{ color: 'var(--primary)' }}>ハピスク</span>
           </h1>
 
           <p style={{
-            fontSize: 'clamp(1.25rem, 3vw, 1.5rem)',
+            fontSize: '1.5rem',
             color: 'var(--text-secondary)',
-            marginBottom: '3rem',
-            lineHeight: '1.8',
-            fontWeight: '500'
+            marginBottom: '2rem',
+            lineHeight: '1.6'
           }}>
-            自分に向き合う"学び直し"が、未来をつくる<br />
-            新しいリカレントプログラム
+            自分に向き合う"学習歴"が、未来をつくる<br />
+            リカレントプログラム
           </p>
 
           <div style={{
             display: 'flex',
-            gap: '1.5rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
+            gap: '1rem',
+            flexWrap: 'wrap',
+            marginBottom: '3rem'
           }}>
-            <a href="#entry" className="button button-primary" style={{
-              fontSize: '1.1rem',
-              padding: '1rem 2rem'
-            }}>
+            <a href="#entry" className="button button-primary">
               資料請求する
             </a>
-            <a href="#entry" className="button button-outline" style={{
-              fontSize: '1.1rem',
-              padding: '1rem 2rem'
-            }}>
+            <a href="#entry" className="button button-outline">
               無料説明会申込
             </a>
           </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '2rem',
+            fontSize: '0.9rem',
+            color: 'var(--text-light)',
+            flexWrap: 'wrap'
+          }}>
+            {heroInfo.map((info, index) => (
+              <div key={index} style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                background: 'rgba(255, 255, 255, 0.8)',
+                padding: '0.5rem 1rem',
+                borderRadius: '20px',
+                boxShadow: 'var(--shadow-sm)'
+              }}>
+                <span style={{
+                  fontSize: '1.2rem'
+                }}>
+                  {info.icon}
+                </span>
+                <span style={{
+                  fontSize: '0.85rem',
+                  fontWeight: '500'
+                }}>
+                  {info.text}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* 右側：画像プレースホルダー */}
+        <div className="animate-slide-in" style={{
+          animationDelay: '0.2s'
+        }}>
+          <Image
+            src="/images/top2.jpg"
+            alt="トップイメージ"
+            width={800}
+            height={600}
+            style={{
+              width: '100%',
+              height: '500px',
+              objectFit: 'cover',
+              aspectRatio: '4/3',
+              minHeight: '500px',
+              borderRadius: '16px',
+              // boxShadow: 'var(--shadow-md)'
+            }}
+            priority
+          />
+        </div>
+      </div>
+
+      {/* スクロール促し矢印 */}
+      <div className="scroll-arrow" onClick={() => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+      }}>
+        ↓
       </div>
     </section>
   );

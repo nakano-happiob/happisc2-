@@ -44,8 +44,15 @@ export default function Contact() {
   };
 
   return (
-    <section className="section">
-      <div className="container">
+    <section className="section section-light" style={{
+      padding: '8rem 0'
+    }}>
+      <div className="container" style={{
+        maxWidth: '1600px',
+        margin: '0 auto',
+        padding: '0 4rem',
+        marginBottom: '5rem'
+      }}>
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -76,7 +83,9 @@ export default function Contact() {
           margin: '0 auto'
         }}>
           {/* お問い合わせフォーム */}
-          <div className="card animate-fade-in">
+          <div className="card animate-fade-in" style={{
+            minHeight: '400px'
+          }}>
             <h3 style={{
               fontSize: '1.5rem',
               marginBottom: '2rem',
@@ -175,6 +184,7 @@ export default function Contact() {
 
           {/* 連絡先情報 */}
           <div className="card animate-fade-in" style={{
+            minHeight: '400px',
             animationDelay: '0.1s'
           }}>
             <h3 style={{

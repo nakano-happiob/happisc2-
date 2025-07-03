@@ -21,7 +21,7 @@ export default function Header() {
       top: 0,
       left: 0,
       right: 0,
-      background: 'rgba(255, 255, 255, 0.95)',
+      background: '#FFD6B0',
       backdropFilter: 'blur(20px)',
       borderBottom: '1px solid var(--border-light)',
       zIndex: 50,
@@ -31,18 +31,20 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '1rem 2rem'
+        padding: '1rem 4rem',
+        maxWidth: '1600px',
+        margin: '0 auto'
       }}>
         {/* ロゴ */}
         <Link href="/" style={{
           textDecoration: 'none',
-          color: 'var(--text-primary)',
+          color: '#fff',
           fontSize: '1.75rem',
           fontWeight: '800',
           fontFamily: 'Montserrat',
           letterSpacing: '-0.5px'
         }}>
-          HAPISQ
+          Happisch
         </Link>
 
         {/* デスクトップナビゲーション */}

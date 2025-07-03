@@ -1,10 +1,14 @@
 'use client';
 
+import Image from 'next/image';
+import React, { useRef } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+
 export default function Stories() {
   const personas = [
     {
       title: '育休復帰後の社会人',
-      description: 'キャリアと子育てを両立しながら、自分の強みを再発見したい',
+      description: '子育てと仕事を両立しながら、自分の強みを再発見したい',
       before: '子育てと仕事の両立に悩み、キャリアの方向性を見失っていた',
       after: '自分の価値観を整理し、新しい働き方を実現'
     },
@@ -15,16 +19,15 @@ export default function Stories() {
       after: '明確なキャリアビジョンを持ち、自信を持って転職活動を開始'
     },
     {
-      title: '地域活動に関わるミドル世代',
+      title: 'マネジメントに関わるミドル世代',
       description: '組織づくりや人を巻き込む力を身につけたい',
-      before: '地域活動で人をまとめることに苦労していた',
-      after: 'ファシリテーションスキルを身につけ、効果的な組織運営を実現'
-    },
+      before: '会社の中でメンバーをまとめることに苦労していた',
+      after: 'ファシリテーションスキルを身につけ、効果的な組織運営を実現'},
     {
       title: '将来に迷う学生',
-      description: '学んできたことを社会でどう活かせるか知りたい',
-      before: '学んだ知識と社会での実践のギャップに悩んでいた',
-      after: '実践的なスキルを身につけ、社会で活躍できる自信を獲得'
+      description: '学生時代に学んできたことを社会でどう活かせるか知りたい',
+      before: '学んだ知識を社会で実践できるかの不安感に悩んでいた',
+      after: '自分の知識に磨きをかけ、社会で活躍できる自信を獲得'
     }
   ];
 
@@ -41,9 +44,22 @@ export default function Stories() {
     }
   ];
 
+  const sectionRef = useRef(null);
+  const isVisible = useScrollAnimation(sectionRef);
+
   return (
-    <section id="stories" className="section section-gradient">
-      <div className="container">
+    <section
+      id="stories"
+      ref={sectionRef}
+      className={`section section-gradient${isVisible ? ' animate-fade-in' : ''}`}
+      style={{ padding: '8rem 0' }}
+    >
+      <div className="container" style={{
+        maxWidth: '1600px',
+        margin: '0 auto',
+        padding: '0 4rem',
+        marginBottom: '5rem'
+      }}>
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -55,6 +71,7 @@ export default function Stories() {
           }}>
             こんな人に、ハピスク
           </h2>
+          {/*
           <p style={{
             fontSize: '1.25rem',
             color: 'var(--text-secondary)',
@@ -62,30 +79,98 @@ export default function Stories() {
           }}>
             多様な背景を持つ受講生たちの変化のストーリー
           </p>
+          */}
         </div>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '2rem',
-          maxWidth: '1200px',
-          margin: '0 auto'
+          maxWidth: '900px',
+          margin: '0 auto 4rem'
         }}>
           {personas.map((persona, index) => (
             <div key={index} className="card animate-fade-in" style={{
-              animationDelay: `${index * 0.1}s`,
-              padding: '2rem'
+              minHeight: '400px',
+              animationDelay: `${index * 0.1}s`
             }}>
-              {/* 画像プレースホルダー */}
-              <div className="image-placeholder" style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                margin: '0 auto 1.5rem'
-              }} />
+              {/* 育休復帰後の社会人のみ画像を表示 */}
+              {index === 0 ? (
+                <Image
+                  src="/images/ikukyuu.jpg"
+                  alt="育休復帰後の社会人"
+                  width={360}
+                  height={360}
+                  style={{
+                    width: '180px',
+                    height: '180px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    margin: '0 auto 2rem',
+                    display: 'block'
+                  }}
+                  priority
+                />
+              ) : index === 1 ? (
+                <Image
+                  src="/images/tensyoku.jpg"
+                  alt="転職を考える20代"
+                  width={360}
+                  height={360}
+                  style={{
+                    width: '180px',
+                    height: '180px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    margin: '0 auto 2rem',
+                    display: 'block'
+                  }}
+                  priority
+                />
+              ) : index === 2 ? (
+                <Image
+                  src="/images/management.jpg"
+                  alt="マネジメントに関わるミドル世代"
+                  width={360}
+                  height={360}
+                  style={{
+                    width: '180px',
+                    height: '180px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    margin: '0 auto 2rem',
+                    display: 'block'
+                  }}
+                  priority
+                />
+              ) : index === 3 ? (
+                <Image
+                  src="/images/Whisk_edaf989215.jpg"
+                  alt="将来に迷う学生"
+                  width={360}
+                  height={360}
+                  style={{
+                    width: '180px',
+                    height: '180px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    margin: '0 auto 2rem',
+                    display: 'block'
+                  }}
+                  priority
+                />
+              ) : (
+                <div className="image-placeholder" style={{
+                  width: '180px',
+                  height: '180px',
+                  borderRadius: '50%',
+                  margin: '0 auto 2rem',
+                  display: 'block'
+                }} />
+              )}
               
               <h3 style={{
-                fontSize: '1.25rem',
+                fontSize: '1.5rem',
                 marginBottom: '1rem',
                 color: 'var(--primary)',
                 textAlign: 'center',
@@ -99,81 +184,70 @@ export default function Stories() {
                 lineHeight: '1.8',
                 marginBottom: '1.5rem',
                 textAlign: 'center',
-                fontSize: '0.95rem'
+                fontSize: '1.15rem',
+                fontWeight: '500'
               }}>
                 「{persona.description}」
               </p>
 
               <div style={{
+                background: '#F3F4F6',
+                padding: '1rem',
+                borderRadius: '8px',
+                marginBottom: '1rem',
+                minHeight: '70px',
                 display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                alignItems: 'center'
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center'
               }}>
-                {/* Before */}
-                <div style={{
-                  background: 'var(--bg-light)',
-                  padding: '1.5rem',
-                  borderRadius: '8px',
-                  width: '100%'
+                <p style={{
+                  fontSize: '1.05rem',
+                  color: 'var(--text-secondary)',
+                  lineHeight: '1.5',
+                  margin: 0
                 }}>
-                  <p style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--text-light)',
-                    marginBottom: '0.5rem',
-                    fontWeight: '600'
-                  }}>
-                    Before
-                  </p>
-                  <p style={{
-                    fontSize: '0.85rem',
-                    color: 'var(--text-secondary)',
-                    lineHeight: '1.5'
-                  }}>
-                    {persona.before}
-                  </p>
-                </div>
+                  {persona.before}
+                </p>
+              </div>
 
-                {/* 矢印 */}
-                <div style={{
-                  color: 'var(--primary)',
-                  fontSize: '2rem',
-                  margin: '0.5rem 0'
-                }}>
-                  ↓
-                </div>
+              {/* ↓矢印を中央揃えで追加 */}
+              <div style={{
+                textAlign: 'center',
+                fontSize: '2rem',
+                color: 'var(--primary)',
+                margin: '0.5rem 0'
+              }}>
+                ↓
+              </div>
 
-                {/* After */}
-                <div style={{
-                  background: 'var(--gradient-accent)',
-                  padding: '1.5rem',
-                  borderRadius: '8px',
-                  width: '100%'
+              <div style={{
+                background: 'var(--gradient-accent)',
+                padding: '1rem',
+                borderRadius: '8px',
+                flex: 1,
+                minHeight: '70px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center'
+              }}>
+                <p style={{
+                  fontSize: '1.05rem',
+                  color: 'var(--text-primary)',
+                  lineHeight: '1.5',
+                  margin: 0
                 }}>
-                  <p style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--accent-dark)',
-                    marginBottom: '0.5rem',
-                    fontWeight: '600'
-                  }}>
-                    After
-                  </p>
-                  <p style={{
-                    fontSize: '0.85rem',
-                    color: 'var(--text-primary)',
-                    lineHeight: '1.5'
-                  }}>
-                    {persona.after}
-                  </p>
-                </div>
+                  {persona.after}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
+        {/*
         <div style={{
-          maxWidth: '800px',
-          margin: '0 auto'
+          marginTop: '6rem',
         }}>
           <h3 style={{
             fontSize: '1.75rem',
@@ -228,6 +302,7 @@ export default function Stories() {
             ))}
           </div>
         </div>
+        */}
       </div>
     </section>
   );

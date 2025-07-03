@@ -1,5 +1,10 @@
 'use client';
 
+import React, { useRef } from 'react';
+
+// 共通フックを仮定（後で作成）
+import useScrollAnimation from '../hooks/useScrollAnimation';
+
 const keywords = [
   { text: '#学習歴', icon: '📚' },
   { text: '#実践力', icon: '💪' },
@@ -33,9 +38,21 @@ const comparison = [
 ];
 
 export default function About() {
+  const sectionRef = useRef(null);
+  const isVisible = useScrollAnimation(sectionRef);
   return (
-    <section className="section section-light">
-      <div className="container">
+    <section
+      ref={sectionRef}
+      className={`section section-light${isVisible ? ' animate-fade-in' : ''}`}
+      style={{ padding: '8rem 0' }}
+    >
+      <div className="container" style={{
+        maxWidth: '1600px',
+        margin: '0 auto',
+        textAlign: 'center',
+        marginBottom: '5rem',
+        padding: '0 4rem'
+      }}>
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -58,7 +75,9 @@ export default function About() {
           margin: '0 auto'
         }}>
           {/* 会社概要 */}
-          <div className="card animate-fade-in">
+          <div className="card animate-fade-in" style={{
+            minHeight: '400px'
+          }}>
             <h3 style={{
               fontSize: '1.5rem',
               marginBottom: '2rem',
@@ -101,6 +120,7 @@ export default function About() {
 
           {/* サービス説明 */}
           <div className="card animate-fade-in" style={{
+            minHeight: '400px',
             animationDelay: '0.1s'
           }}>
             <h3 style={{
@@ -134,7 +154,9 @@ export default function About() {
           margin: '4rem auto 0',
           textAlign: 'center'
         }}>
+          {/*
           <div className="card animate-fade-in" style={{
+            minHeight: '400px',
             animationDelay: '0.2s'
           }}>
             <h3 style={{
@@ -153,6 +175,7 @@ export default function About() {
               誰もが新しい可能性に踏み出せる社会を目指して活動しています。
             </p>
           </div>
+          */}
         </div>
       </div>
     </section>
