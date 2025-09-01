@@ -1,0 +1,157 @@
+"use client";
+
+export default function UseCases(){
+  const sections = [
+    {
+      title: "合意形成・リレーションシップ",
+      subtitle: "円滑に議論を進める・関係値を強化する",
+      bgColor: "bg-pink-50",
+      items: [
+        {
+          title: "全員を巻き込む",
+          before: "会議で声の大きい人の意見だけで話が進み、他のメンバーや学生は発言しづらい",
+          after: "一人ひとりの声が拾われ、全員が「自分ごと」として合意に参加できる",
+          icon: {
+            symbol: "👥",
+            color: "from-pink-500 to-orange-500"
+          }
+        },
+        {
+          title: "衝突を合意に変える",
+          before: "部活動やゼミでの話し合いで意見がぶつかると、気まずさから議論が止まってしまう",
+          after: "対立が安全に扱われ、違いを出し合うことで建設的な合意が生まれる",
+          icon: {
+            symbol: "💡",
+            color: "from-orange-500 to-yellow-500"
+          }
+        },
+        {
+          title: "信頼を育む",
+          before: "商談が表面的な意見交換で終わり、本音や信頼関係が築けない",
+          after: "安心して本音を交わせることで、関係性が深まり、次の行動につながる",
+          icon: {
+            symbol: "🤝",
+            color: "from-yellow-500 to-green-500"
+          }
+        }
+      ]
+    },
+    {
+      title: "アイデア・共創",
+      subtitle: "様々な意見を引き出す・意見をかけ合わせる",
+      bgColor: "bg-teal-50",
+      items: [
+        {
+          title: "発想を引き出す",
+          before: "ワークショップで参加者が黙り込み、考えの幅が広がらない",
+          after: "問いかけをきっかけに多様な発想が次々と生まれる",
+          icon: {
+            symbol: "📚",
+            color: "from-teal-500 to-blue-500"
+          }
+        },
+        {
+          title: "アイデアを育てる",
+          before: "ブレストでアイデアが単発で出ても、話題がつながらず広がりが生まれない",
+          after: "一人の言葉が別の人の気づきにつながり、新しい発想が形になる",
+          icon: {
+            symbol: "🎤",
+            color: "from-blue-500 to-purple-500"
+          }
+        },
+        {
+          title: "視野を広げる",
+          before: "自治会での話し合いが既存のやり方や前提に縛られ、新しい解決策が見えてこない",
+          after: "多様な視点を掛け合わせ、想定外のアイデアや選択肢が見えてくる",
+          icon: {
+            symbol: "💭",
+            color: "from-purple-500 to-pink-500"
+          }
+        }
+      ]
+
+    }
+  ];
+  
+  return (
+    <section id="usecases" className="section-space relative overflow-hidden" 
+             style={{background: 'linear-gradient(135deg, var(--brand-teal-soft) 0%, #ffffff 30%, var(--brand-pink-soft) 100%)'}}>
+      {/* Background decorations */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 right-20 w-96 h-96 bg-gradient-to-br from-teal-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
+      </div>
+
+      <div className="container-live relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="title-lg mb-6">
+            どんな場面で活かせるか？
+          </h2>
+          <p className="text-unified content-width" style={{color: 'var(--text-muted)'}}>
+            あらゆるコミュニティで「ファシリテーター」が力を発揮します
+          </p>
+        </div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-20">
+            {sections.map((section, sectionIndex) => (
+              <div key={section.title} className="relative">
+                {/* セクションヘッダー */}
+                <div className="text-center mb-10">
+                  <h3 className="title-md mb-3" style={{color: 'var(--brand-teal-dark)'}}>
+                    {section.title}
+                  </h3>
+                  <p className="text-base" style={{color: 'var(--text-muted)'}}>
+                    {section.subtitle}
+                  </p>
+                </div>
+
+                {/* カードグリッド */}
+                                  <div className="grid md:grid-cols-3 gap-6">
+                    {section.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="group relative h-full">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50 flex flex-col h-full min-h-[420px]">
+
+                         
+                         {/* タイトル */}
+                         <h4 className="text-lg font-bold mb-6 text-center flex-shrink-0" style={{color: 'var(--text-strong)'}}>
+                           {item.title}
+                         </h4>
+                         
+                         {/* Before/After */}
+                         <div className="space-y-4 flex-grow flex flex-col">
+                           <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 rounded-xl border-l-4 border-red-400 flex-1 flex flex-col">
+                             <p className="text-xs font-bold text-red-600 mb-2 uppercase tracking-wider">Before</p>
+                             <p className="text-sm font-medium text-gray-700 leading-relaxed flex-grow">{item.before}</p>
+                           </div>
+                           
+                           <div className="flex justify-center py-2 flex-shrink-0">
+                             <div className="w-6 h-6 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full flex items-center justify-center">
+                               <span className="text-white text-xs font-bold">↓</span>
+                             </div>
+                           </div>
+                           
+                           <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl border-l-4 border-green-400 flex-1 flex flex-col">
+                             <p className="text-xs font-bold text-green-600 mb-2 uppercase tracking-wider">After</p>
+                             <p className="text-sm font-bold text-gray-800 leading-relaxed flex-grow">{item.after}</p>
+                           </div>
+                         </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-20">
+          <a href="#apply" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            詳しく聞いてみる（無料説明会）
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,26 +1,411 @@
 @import "tailwindcss";
 
+/* ===== CSS Variables ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
+  
+  /* Brand Colors */
+  --brand-teal: #00A4CC;
+  --brand-teal-dark: #008EAC;
+  --brand-teal-soft: #E6F7FB;
+  --brand-pink: #E6007E;
+  --brand-pink-soft: #FDF2F8;
+  --brand-yellow: #FFD700;
+  --brand-orange: #F08300;
+  --brand-purple: #5A2A82;
+  
+  /* Text Colors */
+  --text-strong: #0F172A;
+  --text-muted: #475569;
+  --text-light: #64748B;
+  
+  /* Layout */
+  --container-width: 1200px;
+  --section-spacing: 120px;
+  --card-spacing: 80px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-strong);
+  font-family: var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.01em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-strong);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  font-family: var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, div, span, li {
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+/* ===== Unified Text Styles ===== */
+.text-unified {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .text-unified {
+    font-size: 1.5rem;
+    line-height: 1.75;
+  }
+}
+
+.title-xl {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title-lg {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.title-md {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-strong);
+}
+
+.text-base {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-strong);
+}
+
+.text-sm {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-strong);
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+  .title-xl {
+    font-size: 2.25rem;
+  }
+  
+  .title-lg {
+    font-size: 2rem;
+  }
+  
+  .title-md {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===== Layout Components ===== */
+.container-live {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container-live {
+    padding: 0 1rem;
+  }
+}
+
+.section-space {
+  padding: var(--section-spacing) 0;
+}
+
+@media (max-width: 768px) {
+  .section-space {
+    padding: 80px 0;
+  }
+}
+
+/* ===== Card Components ===== */
+.card-white {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Button Components ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, var(--brand-pink), #FF1493);
+  color: white;
+}
+
+.btn-pink:hover {
+  background: linear-gradient(135deg, #C70061, var(--brand-pink));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(230, 0, 126, 0.3);
+}
+
+.btn-yellow {
+  background: linear-gradient(135deg, var(--brand-yellow), #FFA500);
+  color: var(--text-strong);
+  padding: 10px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-yellow:hover {
+  background: linear-gradient(135deg, #E6C200, var(--brand-yellow));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-teal {
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-teal-dark));
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-teal:hover {
+  background: linear-gradient(135deg, var(--brand-teal-dark), #006B8C);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 164, 204, 0.3);
+}
+
+/* ===== Icon Components ===== */
+.icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-pink));
+}
+
+.icon.pink {
+  background: linear-gradient(135deg, var(--brand-pink), #FF1493);
+}
+
+.icon.yellow {
+  background: linear-gradient(135deg, var(--brand-yellow), #FFA500);
+}
+
+.icon.teal {
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-teal-dark));
+}
+
+.icon.purple {
+  background: linear-gradient(135deg, var(--brand-purple), #7C3AED);
+}
+
+/* ===== Navigation ===== */
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: var(--text-strong);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: var(--brand-teal-soft);
+  color: var(--brand-teal);
+}
+
+/* ===== Header Specific ===== */
+.btn-header {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* ===== Responsive Grid Fixes ===== */
+.grid-fixed {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-fixed.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-fixed.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-fixed.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid-fixed.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-fixed.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-fixed.cols-4,
+  .grid-fixed.cols-3,
+  .grid-fixed.cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Content Width Control ===== */
+.content-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-width-wide {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== Section Backgrounds ===== */
+.bg-soft {
+  background: var(--brand-teal-soft);
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--brand-teal-soft) 0%, #ffffff 100%);
+}
+
+/* ===== Spacing Utilities ===== */
+.mb-section {
+  margin-bottom: var(--card-spacing);
+}
+
+.mt-section {
+  margin-top: var(--card-spacing);
+}
+
+/* ===== Animation Utilities ===== */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== Typography Improvements ===== */
+/* Override muted text for better readability */
+.text-muted {
+  color: var(--text-strong) !important;
+  font-weight: 500 !important;
+  opacity: 0.85;
+}
+
+/* Ensure consistent font family across all components */
+*, *::before, *::after {
+  font-family: var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Enhanced typography for professional look */
+.title-xl, .title-lg, .title-md {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+}
+
+.text-lg, .text-base, .text-sm {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }

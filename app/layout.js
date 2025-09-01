@@ -1,9 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Inter, Noto_Sans_JP, Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-noto",
 });
 
 const geistMono = Geist_Mono({
@@ -18,11 +34,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="ja">
+      <body className={`${poppins.variable} ${inter.variable} ${notoSansJP.variable} ${geistMono.variable} antialiased`} style={{fontFamily: 'var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif'}}>
         {children}
+        <div className="fixed bottom-3 left-0 right-0 px-4 sm:hidden z-40">
+          <div className="mx-auto max-w-md grid grid-cols-2 gap-2">
+            <a href="#apply" className="btn-teal text-sm py-3">無料説明会</a>
+            <a href="#download" className="btn-yellow text-sm py-3">資料請求</a>
+          </div>
+        </div>
       </body>
     </html>
   );
