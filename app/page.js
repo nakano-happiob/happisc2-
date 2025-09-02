@@ -1,32 +1,25 @@
-import PageShell from "@/app/components/PageShell";
-import Hero from "@/app/components/Hero";
-import FreeInfoSession from "@/app/components/FreeInfoSession";
-import AboutDialogue from "@/app/components/AboutDialogue";
-import UseCases from "@/app/components/UseCasesTabs";
-import Benefits from "@/app/components/Benefits";
-import Curriculum from "@/app/components/Curriculum";
-import Program from "@/app/components/Program";
-import FAQ from "@/app/components/FAQ";
-import AboutCompany from "@/app/components/AboutCompany";
-import Closing from "@/app/components/Closing";
-import StructuredData from "@/app/components/StructuredData";
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Vision from './components/Vision';
+import LearningJourney from './components/LearningJourney';
+import Curriculum from './components/Curriculum';
+import Portfolio from './components/Portfolio';
+import Stories from './components/Stories';
+import Entry from './components/Entry';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <>
-      <StructuredData />
-      <PageShell>
-        <Hero />
-        <FreeInfoSession />
-        <AboutDialogue />
-        <UseCases />
-        <Program />
-        <Curriculum />
-        <Benefits />
-        <FAQ />
-        <AboutCompany />
-        <Closing />
-      </PageShell>
-    </>
+    <main>
+      <Header />
+      <Hero />
+      <Vision />
+      <LearningJourney />
+      <Curriculum />
+      <Portfolio />
+      <Stories />
+      <Entry />
+      <Footer />
+      </main>
   );
 }
