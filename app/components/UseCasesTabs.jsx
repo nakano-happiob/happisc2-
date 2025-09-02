@@ -9,7 +9,7 @@ export default function UseCases(){
       items: [
         {
           title: "全員を巻き込む",
-          before: "会議で声の大きい人の意見だけで話が進み、他のメンバーや学生は発言しづらい",
+          before: "会議で声の大きい人の意見だけで話が進み、他の社員は発言しづらい",
           after: "一人ひとりの声が拾われ、全員が「自分ごと」として合意に参加できる",
           icon: {
             symbol: "👥",
@@ -18,7 +18,7 @@ export default function UseCases(){
         },
         {
           title: "衝突を合意に変える",
-          before: "部活動やゼミでの話し合いで意見がぶつかると、気まずさから議論が止まってしまう",
+          before: "部署間の打ち合わせで意見がぶつかると、気まずさから議論が止まってしまう",
           after: "対立が安全に扱われ、違いを出し合うことで建設的な合意が生まれる",
           icon: {
             symbol: "💡",
@@ -27,7 +27,7 @@ export default function UseCases(){
         },
         {
           title: "信頼を育む",
-          before: "商談が表面的な意見交換で終わり、本音や信頼関係が築けない",
+          before: "職場のミーティングが表面的な意見交換で終わり、本音や信頼関係が築けない",
           after: "安心して本音を交わせることで、関係性が深まり、次の行動につながる",
           icon: {
             symbol: "🤝",
@@ -43,7 +43,7 @@ export default function UseCases(){
       items: [
         {
           title: "発想を引き出す",
-          before: "ワークショップで参加者が黙り込み、考えの幅が広がらない",
+          before: "授業中のグループワークで生徒が黙り込み、考えの幅が広がらない",
           after: "問いかけをきっかけに多様な発想が次々と生まれる",
           icon: {
             symbol: "📚",
@@ -52,7 +52,7 @@ export default function UseCases(){
         },
         {
           title: "アイデアを育てる",
-          before: "ブレストでアイデアが単発で出ても、話題がつながらず広がりが生まれない",
+          before: "ブレストでアイデアが単発で出てもつながらず、広がりが生まれない",
           after: "一人の言葉が別の人の気づきにつながり、新しい発想が形になる",
           icon: {
             symbol: "🎤",
@@ -61,7 +61,7 @@ export default function UseCases(){
         },
         {
           title: "視野を広げる",
-          before: "自治会での話し合いが既存のやり方や前提に縛られ、新しい解決策が見えてこない",
+          before: "自治会での話し合いが、従来のやり方や前提に縛られて新しい解決策が見えてこない",
           after: "多様な視点を掛け合わせ、想定外のアイデアや選択肢が見えてくる",
           icon: {
             symbol: "💭",
@@ -101,7 +101,7 @@ export default function UseCases(){
                   <h3 className="title-md mb-3" style={{color: 'var(--brand-teal-dark)'}}>
                     {section.title}
                   </h3>
-                  <p className="text-base" style={{color: 'var(--text-muted)'}}>
+                  <p className="text-xl" style={{color: 'var(--text-muted)'}}>
                     {section.subtitle}
                   </p>
                 </div>
@@ -147,7 +147,7 @@ export default function UseCases(){
 
         {/* CTA */}
         <div className="text-center mt-20">
-          <a href="#apply" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>

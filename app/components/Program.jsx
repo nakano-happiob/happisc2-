@@ -20,12 +20,12 @@ export default function Program(){
               </div>
               
               <div style={{minHeight: '260px'}}>
-                <h3 className="text-3xl font-bold mb-6" style={{textAlign: 'left'}}>ベーシックコース</h3>
+                <h3 className="text-3xl font-bold mb-6" style={{textAlign: 'left'}}>アドバンスコース</h3>
                 <p className="text-lg opacity-90 mb-6" style={{textAlign: 'left'}}>
-                  ファシリテーターになるための全カリキュラムを受講
+                  ファシリテーターを目指す方向け
                 </p>
                 <p className="text-base opacity-80 mb-6" style={{textAlign: 'left'}}>
-                  基礎から応用までの一貫した学びを求める方に最適
+                  ファシリテーションに加え、総合的な学びで、実践力と可能性を広げます
                 </p>
                 
                 <div className="space-y-3 mb-6" style={{paddingLeft: '16px'}}>
@@ -33,7 +33,7 @@ export default function Program(){
                     <span className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                       <span className="text-teal-500 text-sm">✓</span>
                     </span>
-                    <span className="text-sm" style={{textAlign: 'left'}}>ファシリテーション基礎〜応用まで学び対話力を磨く</span>
+                    <span className="text-sm" style={{textAlign: 'left'}}>対話を起点に自分と周囲を変えていく力を身につける</span>
                   </div>
                   <div className="flex items-start">
                     <span className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -51,13 +51,13 @@ export default function Program(){
                 
                 <div className="bg-white/20 rounded-xl p-4 mb-6" style={{textAlign: 'left'}}>
                   <p className="text-lg font-bold mb-1">8コマ×各90分</p>
-                  <p className="text-sm opacity-80">【ファシリテーションAorB×3コマ＋選択×5コマ】</p>
+                  <p className="text-sm opacity-80">【ファシリテーション×3コマ＋選択×5コマ】</p>
                   <p className="text-xl font-bold">通常価格：10万円</p>
                 </div>
               </div>
               
               <a href="#apply" className="w-full bg-white text-teal-600 font-bold py-4 px-6 rounded-2xl text-center block hover:bg-gray-50 transition-colors duration-300">
-                ベーシックコースを選ぶ
+                アドバンスコースを選ぶ
               </a>
             </div>
 
@@ -69,7 +69,7 @@ export default function Program(){
                   ファシリテーションに触れてみたい方向け
                 </p>
                 <p className="text-base mb-6" style={{color: 'var(--text-muted)', textAlign: 'left'}}>
-                  気軽に体験できる入門コース
+                  入門としてファシリテーションの基礎を体験し、対話の第一歩を踏み出せます
                 </p>
                 
                 <div className="space-y-3 mb-6" style={{paddingLeft: '16px'}}>
@@ -95,7 +95,7 @@ export default function Program(){
                 
                 <div className="bg-teal-50 rounded-xl p-4 mb-6 border border-teal-200" style={{textAlign: 'left'}}>
                   <p className="text-lg font-bold mb-1" style={{color: 'var(--text-strong)'}}>3コマ×各90分</p>
-                  <p className="text-sm opacity-80" style={{color: 'var(--text-muted)'}}>【ファシリテーションAorB×3コマ】</p>
+                  <p className="text-sm opacity-80" style={{color: 'var(--text-muted)'}}>【ファシリテーション×3コマ】</p>
                   <p className="text-xl font-bold" style={{color: 'var(--text-strong)'}}>通常価格：5万円</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function Program(){
           <p className="text-base mb-6" style={{color: 'var(--text-muted)'}}>
             無料説明会で、あなたの目標に最適なコースをご提案いたします
           </p>
-          <a href="#apply" className="btn btn-pink font-bold">
+          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink font-bold">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>

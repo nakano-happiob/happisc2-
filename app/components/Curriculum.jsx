@@ -2,7 +2,7 @@ export default function Curriculum(){
   // 開講中の科目
   const currentlyAvailable = [
     {
-      title: 'ファシリテーションA\n【合意形成・リレーションシップ】',
+      title: 'ファシリテーターA\n【合意形成・リレーションシップ】',
       week: '第1週',
       desc: '実践的な場づくり・対話の深化・合意形成スキルの習得',
       goal: '白熱する対話の型を習得',
@@ -11,7 +11,7 @@ export default function Curriculum(){
       category: 'core'
     },
     {
-      title: 'ファシリテーションB\n【アイデア・共創】',
+      title: 'ファシリテーターB\n【アイデア・共創】',
       week: '第2週',
       desc: '場づくり・聴く力・問い方・意見の引き出し／白熱する対話の型を習得',
       goal: '実践的ファシリテーション力を習得',
@@ -20,7 +20,7 @@ export default function Curriculum(){
       category: 'core'
     },
     {
-      title: 'フィジカル',
+      title: 'フィジカルトレーナー',
       week: '第8週',
       desc: '姿勢・呼吸・生活リズムを整え集中力と健康を手に入れる',
       goal: 'パフォーマンス向上',
@@ -33,7 +33,7 @@ export default function Curriculum(){
   // COMING SOONの科目
   const comingSoon = [
     {
-      title: 'コミュニケーション',
+      title: 'コミュニケーター',
       week: '第3週',
       desc: '自己開示・傾聴・非言語・伝え方・プレゼン基礎で関係の土台を整える',
       goal: '関係の土台を整える',
@@ -42,7 +42,7 @@ export default function Curriculum(){
       category: 'core'
     },
     {
-      title: 'キャリアデザイン',
+      title: 'キャリアデザイナー',
       week: '第4週',
       desc: '自分史の言語化、強みを棚卸しし、将来像を設計する',
       goal: '将来像を設計する',
@@ -51,25 +51,7 @@ export default function Curriculum(){
       category: 'core'
     },
     {
-      title: 'AIテクノロジー',
-      week: '第5週',
-      desc: 'AIを用いて発想と作業を拡張する',
-      goal: '未来のスキルを習得',
-      color: 'from-blue-500 to-blue-600',
-      bgColor: '#eff6ff',
-      category: 'skill'
-    },
-    {
-      title: 'ポジティブシンキング',
-      week: '第6週',
-      desc: '失敗や不安との向き合い方、認知のクセを認識し挑戦を続ける回復力を身につける',
-      goal: '挑戦を続ける回復力を身につける',
-      color: 'from-yellow-500 to-yellow-600',
-      bgColor: '#fefce8',
-      category: 'skill'
-    },
-    {
-      title: 'アートディレクション',
+      title: 'アートディレクター',
       week: '第7週',
       desc: '創造性を高め、考えを伝える力を身につける',
       goal: 'ビジュアル思考をマスター',
@@ -78,7 +60,7 @@ export default function Curriculum(){
       category: 'skill'
     },
     {
-      title: '起業',
+      title: '起業家',
       week: '第9週',
       desc: 'アイデアを行動に変える方法を学ぶ',
       goal: '実践力を身につける',
@@ -99,16 +81,16 @@ export default function Curriculum(){
         </div>
 
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-7 gap-8">
+          <div className="grid lg:grid-cols-5 gap-6">
             
             {/* 開講中 */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-2">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2" style={{color: 'var(--brand-teal)'}}>開講中</h3>
                 <p className="text-base" style={{color: 'var(--text-muted)'}}>現在受講可能な科目</p>
               </div>
               
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-6">
                 {currentlyAvailable.map((subject, i) => (
                   <div key={i} className="rounded-xl p-4 feature-card relative flex flex-col justify-between overflow-hidden" style={{
                     backgroundColor: subject.bgColor,
@@ -152,13 +134,13 @@ export default function Curriculum(){
             </div>
 
             {/* COMING SOON */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-3">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2" style={{color: 'var(--text-muted)'}}>COMING SOON</h3>
                 <p className="text-base" style={{color: 'var(--text-muted)'}}>準備中の科目</p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 {comingSoon.map((subject, i) => (
                   <div key={i} className="rounded-xl p-4 feature-card relative opacity-75 flex flex-col justify-between overflow-hidden" style={{
                     backgroundColor: subject.bgColor,
@@ -207,7 +189,7 @@ export default function Curriculum(){
           <p className="text-xl font-semibold mb-8" style={{color: 'var(--text-strong)'}}>
             複数科目受講をご希望の方はご相談ください
           </p>
-          <a href="#apply" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>

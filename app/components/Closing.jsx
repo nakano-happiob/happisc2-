@@ -30,11 +30,11 @@ export default function Closing(){
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="#apply" className="btn btn-pink px-10 py-5 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{color: 'white'}}>
+              <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-10 py-5 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{color: 'white'}}>
                 詳しく聞いてみる（無料説明会）
               </a>
-              <a href="#download" className="btn btn-yellow px-10 py-5 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{color: 'var(--text-strong)'}}>
-                資料請求
+              <a href="https://form.run/@happiob" target="_blank" rel="noopener noreferrer" className="btn btn-yellow px-10 py-5 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{color: 'var(--text-strong)'}}>
+                お問い合わせ
               </a>
             </div>
           </div>

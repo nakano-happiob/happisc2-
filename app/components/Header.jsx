@@ -22,8 +22,8 @@ export default function Header(){
           </nav>
           
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <a href="#apply" className="btn-pink text-sm px-3 lg:px-4 py-2 whitespace-nowrap">無料説明会</a>
-            <a href="#download" className="btn-yellow text-sm px-3 lg:px-4 py-2 whitespace-nowrap">資料請求</a>
+            <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn-pink text-sm px-3 lg:px-4 py-2 whitespace-nowrap">無料説明会</a>
+            <a href="https://form.run/@happiob" target="_blank" rel="noopener noreferrer" className="btn-yellow text-sm px-3 lg:px-4 py-2 whitespace-nowrap">お問い合わせ</a>
           </div>
         </div>
       </div>
