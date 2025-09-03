@@ -1,3 +1,5 @@
+'use client';
+
 export default function Benefits(){
   // SVGアイコンコンポーネント
   const DialogueSkillIcon = () => (

@@ -1,169 +1,32 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-
-const navigation = [
-  { name: 'About', href: '#about' },
-  { name: 'Journey', href: '#journey' },
-  { name: 'Curriculum', href: '#curriculum' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Stories', href: '#stories' },
-  { name: 'Entry/FAQ', href: '#entry' }
-];
-
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export default function Header(){
   return (
-    <header style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      background: '#FFD6B0',
-      backdropFilter: 'blur(20px)',
-      borderBottom: '1px solid var(--border-light)',
-      zIndex: 50,
-      boxShadow: 'var(--shadow-sm)'
-    }}>
-      <div className="container" style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1rem 4rem',
-        maxWidth: '1600px',
-        margin: '0 auto'
-      }}>
-        {/* ロゴ */}
-        <Link href="/" style={{
-          textDecoration: 'none',
-          color: '#fff',
-          fontSize: '1.75rem',
-          fontWeight: '800',
-          fontFamily: 'Montserrat',
-          letterSpacing: '-0.5px'
-        }}>
-          Happisch
-        </Link>
-
-        {/* デスクトップナビゲーション */}
-        <nav style={{
-          display: 'none',
-          '@media (min-width: 768px)': {
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem'
-          }
-        }}>
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="nav-link"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Link href="#entry" className="button button-accent" style={{
-            marginLeft: '1rem'
-          }}>
-            エントリー
-          </Link>
-        </nav>
-
-        {/* モバイルメニューボタン */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          style={{
-            display: 'block',
-            '@media (min-width: 768px)': {
-              display: 'none'
-            },
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            padding: '0.5rem',
-            borderRadius: '8px',
-            transition: 'all 0.3s ease'
-          }}
-        >
-          <span style={{
-            display: 'block',
-            width: '24px',
-            height: '2px',
-            background: 'var(--text-primary)',
-            marginBottom: '6px',
-            transition: 'all 0.3s ease',
-            transform: isMenuOpen ? 'rotate(45deg) translate(6px, 6px)' : 'none'
-          }} />
-          <span style={{
-            display: 'block',
-            width: '24px',
-            height: '2px',
-            background: 'var(--text-primary)',
-            marginBottom: '6px',
-            transition: 'all 0.3s ease',
-            opacity: isMenuOpen ? 0 : 1
-          }} />
-          <span style={{
-            display: 'block',
-            width: '24px',
-            height: '2px',
-            background: 'var(--text-primary)',
-            transition: 'all 0.3s ease',
-            transform: isMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none'
-          }} />
-        </button>
-      </div>
-
-      {/* モバイルメニュー */}
-      <div style={{
-        display: isMenuOpen ? 'block' : 'none',
-        '@media (min-width: 768px)': {
-          display: 'none'
-        },
-        position: 'absolute',
-        top: '100%',
-        left: 0,
-        right: 0,
-        background: 'var(--bg-white)',
-        padding: '1rem',
-        boxShadow: 'var(--shadow-md)',
-        borderTop: '1px solid var(--border-light)'
-      }}>
-        <nav style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.5rem'
-        }}>
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-              style={{
-                textAlign: 'center',
-                padding: '1rem'
-              }}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Link 
-            href="#entry" 
-            className="button button-accent"
-            onClick={() => setIsMenuOpen(false)}
-            style={{
-              marginTop: '1rem',
-              textAlign: 'center'
-            }}
-          >
-            エントリー
-          </Link>
-        </nav>
+    <header className="bg-white/95 backdrop-blur-sm sticky top-0 z-50" style={{borderBottom: '1px solid #E0E0E0'}}>
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center flex-shrink-0 min-w-0">
+            <img src="/logo.png" alt="Happiob Logo" className="h-8 lg:h-10 mr-2 lg:mr-3 flex-shrink-0" />
+            <span className="text-lg lg:text-xl font-bold whitespace-nowrap" style={{color: '#333333'}}>HAPPISCH</span>
+          </div>
+          
+          <nav className="hidden xl:flex items-center space-x-4 lg:space-x-6 mx-4 lg:mx-8">
+            <a href="#hero" className="nav-link text-sm font-medium">ホーム</a>
+            <a href="#about" className="nav-link text-sm font-medium">ファシリテーターとは</a>
+            <a href="#usecases" className="nav-link text-sm font-medium">活用場面</a>
+            <a href="#program" className="nav-link text-sm font-medium">学習コース</a>
+            <a href="#curriculum" className="nav-link text-sm font-medium">カリキュラム</a>
+            <a href="#benefits" className="nav-link text-sm font-medium">特徴</a>
+            <a href="#faq" className="nav-link text-sm font-medium">FAQ</a>
+            <a href="#about-company" className="nav-link text-sm font-medium">会社情報</a>
+          </nav>
+          
+          <div className="flex items-center space-x-2 flex-shrink-0">
+            <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn-pink text-sm px-3 lg:px-4 py-2 whitespace-nowrap">無料説明会</a>
+            <a href="https://form.run/@happiob" target="_blank" rel="noopener noreferrer" className="btn-yellow text-sm px-3 lg:px-4 py-2 whitespace-nowrap">お問い合わせ</a>
+          </div>
+        </div>
       </div>
     </header>
   );
-} 
+}

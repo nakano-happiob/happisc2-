@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://happisc.com/sitemap.xml
