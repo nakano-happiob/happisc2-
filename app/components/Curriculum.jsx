@@ -86,32 +86,31 @@ export default function Curriculum(){
             {/* 開講中 */}
             <div className="lg:col-span-2">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2" style={{color: 'var(--brand-teal)'}}>開講中</h3>
-                <p className="text-base" style={{color: 'var(--text-muted)'}}>現在受講可能な科目</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-2" style={{color: 'var(--brand-teal)'}}>開講中</h3>
+                <p className="text-sm md:text-base" style={{color: 'var(--text-muted)'}}>現在受講可能な科目</p>
               </div>
               
-              <div className="grid grid-cols-1 gap-6">
+              <div className="grid grid-cols-1 gap-4 md:gap-6">
                 {currentlyAvailable.map((subject, i) => (
-                  <div key={i} className="rounded-xl p-4 feature-card relative flex flex-col justify-between overflow-hidden" style={{
+                  <div key={i} className="rounded-xl p-3 md:p-4 feature-card relative flex flex-col justify-between overflow-hidden" style={{
                     backgroundColor: subject.bgColor,
-                    minHeight: '160px',
-                    maxHeight: '160px',
-                    height: '160px'
+                    minHeight: 'auto',
+                    height: 'auto'
                   }}>
                     {/* 開講中バッジ */}
-                    <div className="absolute top-3 right-3">
+                    <div className="absolute top-2 md:top-3 right-2 md:right-3">
                       <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                         開講中
                       </span>
                     </div>
                     
-                    <div className="flex-1 pt-2">
-                      <div className="flex items-start mb-3">
+                    <div className="flex-1 pt-6 md:pt-2">
+                      <div className="flex items-start mb-2 md:mb-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
-                        <h4 className="text-lg" style={{
+                        <h4 className="text-sm md:text-lg break-words" style={{
                           color: '#0F172A',
                           fontWeight: '900',
-                          fontSize: '18px',
+                          fontSize: 'clamp(14px, 4vw, 18px)',
                           lineHeight: '1.2',
                           letterSpacing: '-0.025em',
                           whiteSpace: 'pre-line',
@@ -120,9 +119,9 @@ export default function Curriculum(){
                           {subject.title}
                         </h4>
                       </div>
-                      <p style={{
+                      <p className="break-words" style={{
                         color: '#0F172A',
-                        fontSize: '14px',
+                        fontSize: 'clamp(12px, 3.5vw, 14px)',
                         lineHeight: '1.5',
                         paddingLeft: '24px',
                         paddingRight: '24px'
@@ -136,41 +135,40 @@ export default function Curriculum(){
             {/* COMING SOON */}
             <div className="lg:col-span-3">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2" style={{color: 'var(--text-muted)'}}>COMING SOON</h3>
-                <p className="text-base" style={{color: 'var(--text-muted)'}}>準備中の科目</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-2" style={{color: 'var(--text-muted)'}}>COMING SOON</h3>
+                <p className="text-sm md:text-base" style={{color: 'var(--text-muted)'}}>準備中の科目</p>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {comingSoon.map((subject, i) => (
-                  <div key={i} className="rounded-xl p-4 feature-card relative opacity-75 flex flex-col justify-between overflow-hidden" style={{
+                  <div key={i} className="rounded-xl p-3 md:p-4 feature-card relative opacity-75 flex flex-col justify-between overflow-hidden" style={{
                     backgroundColor: subject.bgColor,
-                    minHeight: '160px',
-                    maxHeight: '160px',
-                    height: '160px'
+                    minHeight: 'auto',
+                    height: 'auto'
                   }}>
                     {/* COMING SOONバッジ */}
-                    <div className="absolute top-3 right-3">
+                    <div className="absolute top-2 md:top-3 right-2 md:right-3">
                       <span className="bg-gray-400 text-white text-xs font-bold px-2 py-1 rounded-full">
                         COMING SOON
                       </span>
                     </div>
                     
-                    <div className="flex-1 pt-2">
-                      <div className="flex items-start mb-3">
+                    <div className="flex-1 pt-6 md:pt-2">
+                      <div className="flex items-start mb-2 md:mb-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
-                        <h4 className="text-lg" style={{
+                        <h4 className="text-sm md:text-lg break-words" style={{
                           color: '#0F172A',
                           fontWeight: '900',
-                          fontSize: '18px',
+                          fontSize: 'clamp(14px, 4vw, 18px)',
                           lineHeight: '1.2',
                           letterSpacing: '-0.025em'
                         }}>
                           {subject.title}
                         </h4>
                       </div>
-                      <p style={{
+                      <p className="break-words" style={{
                         color: '#0F172A',
-                        fontSize: '14px',
+                        fontSize: 'clamp(12px, 3.5vw, 14px)',
                         lineHeight: '1.5',
                         paddingLeft: '24px',
                         paddingRight: '24px'
@@ -186,10 +184,10 @@ export default function Curriculum(){
         
         {/* 追加メッセージとCTA */}
         <div className="text-center mt-section content-width">
-          <p className="text-xl font-semibold mb-8" style={{color: 'var(--text-strong)'}}>
+          <p className="text-lg md:text-xl font-semibold mb-6 md:mb-8 break-words" style={{color: 'var(--text-strong)'}}>
             複数科目受講をご希望の方はご相談ください
           </p>
-          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-10 py-4 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-6 md:px-10 py-3 md:py-4 text-base md:text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>
