@@ -25,7 +25,7 @@ export default function Program(){
                   ファシリテーターを目指す方向け
                 </p>
                 <p className="text-base opacity-80 mb-6" style={{textAlign: 'left'}}>
-                  ファシリテーションに加え、総合的な学びで、実践力と可能性を広げます
+                  ファシリテーションに加え、専門的な学びで実践力と可能性を広げます
                 </p>
                 
                 <div className="space-y-3 mb-6" style={{paddingLeft: '16px'}}>
