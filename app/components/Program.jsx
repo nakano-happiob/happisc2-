@@ -56,7 +56,7 @@ export default function Program(){
                 </div>
               </div>
               
-              <a href="#apply" className="w-full bg-white text-teal-600 font-bold py-4 px-6 rounded-2xl text-center block hover:bg-gray-50 transition-colors duration-300">
+              <a href="https://forms.gle/eg7QrVAPwk39FM156" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-teal-600 font-bold py-4 px-6 rounded-2xl text-center block hover:bg-gray-50 transition-colors duration-300">
                 アドバンスコースを選ぶ
               </a>
             </div>
@@ -100,7 +100,7 @@ export default function Program(){
                 </div>
               </div>
               
-              <a href="#apply" className="w-full bg-teal-500 text-white font-bold py-4 px-6 rounded-2xl text-center block hover:bg-teal-600 transition-colors duration-300">
+              <a href="https://forms.gle/sFTxcybFeDXapMPC6" target="_blank" rel="noopener noreferrer" className="w-full bg-teal-500 text-white font-bold py-4 px-6 rounded-2xl text-center block hover:bg-teal-600 transition-colors duration-300">
                 エントリーコースを選ぶ
               </a>
             </div>

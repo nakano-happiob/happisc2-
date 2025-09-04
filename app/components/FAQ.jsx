@@ -15,6 +15,10 @@ export default function FAQ(){
     {
       q: "一般的な「話し方講座」とは何が違うのですか？",
       a: "話し方講座が「言葉の選び方や発声」に重点を置くのに対し、ハピスクでは「場の関係性や対話のプロセス」を扱います。"
+    },
+    {
+      q: "受講料の支払い方法について教えてください。",
+      a: "個人の方は銀行振込、法人の方は請求書払い（他、会社名義でのお支払いも可）に対応しています。クレジットカードやPayPalでのお支払いは近日対応予定です。"
     }
   ];
   
@@ -30,7 +34,7 @@ export default function FAQ(){
               <div key={i} className="card-white">
                 <h3 className="text-lg font-bold mb-4">Q. {faq.q}</h3>
                 <br/>
-                <p className="text-unified" style={{color: '#14B8A6'}}>A. {faq.a}</p>
+                <p className="text-unified" style={{color: '#14B8A6', fontSize: '20px'}}>A. {faq.a}</p>
               </div>
             ))}
           </div>
