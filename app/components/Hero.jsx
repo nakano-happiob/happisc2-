@@ -47,7 +47,7 @@ export default function Hero(){
             </div>
             
             <div className="pt-6">
-              <a href="#apply" className="inline-block px-8 py-4 text-lg font-bold text-white rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{backgroundColor: '#EC4899', color: 'white'}}>
+              <a href="https://forms.gle/2hrPf8UR7rpYcK718" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 text-lg font-bold text-white rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300" style={{backgroundColor: '#EC4899', color: 'white'}}>
                 詳しく聞いてみる（無料説明会）
               </a>
             </div>

@@ -113,7 +113,7 @@ export default function Program(){
           <p className="text-base mb-6" style={{color: 'var(--text-muted)'}}>
             無料説明会で、あなたの目標に最適なコースをご提案いたします
           </p>
-          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink font-bold">
+          <a href="https://forms.gle/2hrPf8UR7rpYcK718" target="_blank" rel="noopener noreferrer" className="btn btn-pink font-bold">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>

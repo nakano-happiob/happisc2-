@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
         {children}
         <div className="fixed bottom-3 left-0 right-0 px-4 sm:hidden z-40">
           <div className="mx-auto max-w-md grid grid-cols-2 gap-2">
-            <a href="#apply" className="btn-teal text-sm py-3">無料説明会</a>
+            <a href="https://forms.gle/2hrPf8UR7rpYcK718" target="_blank" rel="noopener noreferrer" className="btn-teal text-sm py-3">無料説明会</a>
             <a href="#download" className="btn-yellow text-sm py-3">お問い合わせ</a>
           </div>
         </div>

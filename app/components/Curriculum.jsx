@@ -187,7 +187,7 @@ export default function Curriculum(){
           <p className="text-lg md:text-xl font-semibold mb-6 md:mb-8 break-words" style={{color: 'var(--text-strong)'}}>
             複数科目受講をご希望の方はご相談ください
           </p>
-          <a href="https://forms.gle/MXJqWHQg1JLh5ZDa6" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-6 md:px-10 py-3 md:py-4 text-base md:text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <a href="https://forms.gle/2hrPf8UR7rpYcK718" target="_blank" rel="noopener noreferrer" className="btn btn-pink px-6 md:px-10 py-3 md:py-4 text-base md:text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
             詳しく聞いてみる（無料説明会）
           </a>
         </div>
