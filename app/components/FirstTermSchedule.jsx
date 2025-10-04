@@ -13,7 +13,7 @@ export default function FirstTermSchedule(){
             第1期 開講予定日
           </h2>
           <p className="text-lg mb-8" style={{color: '#475569'}}>
-            2025年1月〜3月開催予定
+            2026年1月〜3月開催予定
           </p>
         </div>
 
