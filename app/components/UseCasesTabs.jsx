@@ -106,36 +106,30 @@ export default function UseCases(){
                   </p>
                 </div>
 
-                {/* カードグリッド */}
-                                  <div className="grid md:grid-cols-3 gap-6">
-                    {section.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="group relative h-full">
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50 flex flex-col h-full min-h-[420px]">
-
-                         
-                         {/* タイトル */}
-                         <h4 className="text-lg font-bold mb-6 text-center flex-shrink-0" style={{color: 'var(--text-strong)'}}>
-                           {item.title}
-                         </h4>
-                         
-                         {/* Before/After */}
-                         <div className="space-y-4 flex-grow flex flex-col">
-                           <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 rounded-xl border-l-4 border-red-400 flex-1 flex flex-col">
-                             <p className="text-xs font-bold text-red-600 mb-2 uppercase tracking-wider">Before</p>
-                             <p className="text-sm font-medium text-gray-700 leading-relaxed flex-grow">{item.before}</p>
-                           </div>
-                           
-                           <div className="flex justify-center py-2 flex-shrink-0">
-                             <div className="w-6 h-6 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full flex items-center justify-center">
-                               <span className="text-white text-xs font-bold">↓</span>
-                             </div>
-                           </div>
-                           
-                           <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl border-l-4 border-green-400 flex-1 flex flex-col">
-                             <p className="text-xs font-bold text-green-600 mb-2 uppercase tracking-wider">After</p>
-                             <p className="text-sm font-bold text-gray-800 leading-relaxed flex-grow">{item.after}</p>
-                           </div>
-                         </div>
+                {/* コンテンツグリッド */}
+                <div className="grid md:grid-cols-3 gap-8">
+                  {section.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="text-center">
+                      {/* タイトル */}
+                      <h4 className="text-xl font-bold mb-8" style={{color: '#0F172A'}}>
+                        {item.title}
+                      </h4>
+                      
+                      {/* Before/After */}
+                      <div className="space-y-6">
+                        <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 text-left">
+                          <p className="text-xs font-bold text-red-600 mb-3 uppercase tracking-wider">Before</p>
+                          <p className="text-sm text-gray-700 leading-relaxed">{item.before}</p>
+                        </div>
+                        
+                        <div className="flex justify-center">
+                          <span className="text-lg text-gray-400">↓</span>
+                        </div>
+                        
+                        <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400 text-left">
+                          <p className="text-xs font-bold text-green-600 mb-3 uppercase tracking-wider">After</p>
+                          <p className="text-sm font-medium text-gray-800 leading-relaxed">{item.after}</p>
+                        </div>
                       </div>
                     </div>
                   ))}

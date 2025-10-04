@@ -38,21 +38,21 @@ export default function FirstTermSchedule(){
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>1月14日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>1月14日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>1月21日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>1月21日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>1月28日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>1月28日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
@@ -65,35 +65,35 @@ export default function FirstTermSchedule(){
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>2月11日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>2月11日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>2月18日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>2月18日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>2月25日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>2月25日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>3月11日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A', letterSpacing: '0.05em'}}>3月11日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-6 mt-4 flex-shrink-0"></div>
                 <div>
-                  <p className="text-xl font-semibold mb-1" style={{color: '#0F172A'}}>3月18日（水）</p>
+                  <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>3月18日（水）</p>
                   <p className="text-lg" style={{color: '#475569'}}>19:00-20:30</p>
                 </div>
               </div>
