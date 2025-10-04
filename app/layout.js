@@ -30,6 +30,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: 'ハピスク（HAPPISCH）｜ファシリテーションで毎日が変わる、関係が動き出す。',
   description: 'ハピスク（HAPPISCH）は、ファシリテーションを通じて会話・関係・学びを変えていくスクールです。無料説明会お申込受付中。',
+  keywords: 'ハピスク,HAPPISCH,ファシリテーション,ファシリテーター,コミュニケーション,対話力,会話,関係性,スクール,研修,オンライン,無料説明会,ハピオブ',
   openGraph: {
     title: 'ハピスク（HAPPISCH）｜ファシリテーションで毎日が変わる、関係が動き出す。',
     description: 'ハピスク（HAPPISCH）は、ファシリテーションを通じて会話・関係・学びを変えていくスクールです。無料説明会お申込受付中。',

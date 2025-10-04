@@ -1,6 +1,7 @@
 import PageShell from "@/app/components/PageShell";
 import Hero from "@/app/components/Hero";
 import FreeInfoSession from "@/app/components/FreeInfoSession";
+import FirstTermSchedule from "@/app/components/FirstTermSchedule";
 import AboutDialogue from "@/app/components/AboutDialogue";
 import UseCases from "@/app/components/UseCasesTabs";
 import Benefits from "@/app/components/Benefits";
@@ -15,6 +16,7 @@ export default function Home() {
     <PageShell>
       <Hero />
       <FreeInfoSession />
+      <FirstTermSchedule />
       <AboutDialogue />
       <UseCases />
       <Program />
