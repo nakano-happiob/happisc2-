@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from 'react';
+
 export default function FAQ(){
   const faqs = [
     {
@@ -21,6 +25,20 @@ export default function FAQ(){
       a: "個人の方は銀行振込、法人の方は請求書払い（他、会社名義でのお支払いも可）に対応しています。クレジットカードやPayPalでのお支払いは近日対応予定です。"
     }
   ];
+
+  const [openIndexes, setOpenIndexes] = useState(new Set());
+
+  const toggleFAQ = (index) => {
+    setOpenIndexes(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
   
   return (
     <section id="faq" className="section-space bg-white">
@@ -29,12 +47,26 @@ export default function FAQ(){
           <h2 className="title-lg">よくある質問</h2>
         </div>
         <div className="content-width">
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="card-white">
-                <h3 className="text-lg font-bold mb-4">Q. {faq.q}</h3>
-                <br/>
-                <p className="text-unified" style={{color: '#14B8A6', fontSize: '20px'}}>A. {faq.a}</p>
+              <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(i)}
+                  className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center"
+                >
+                  <h3 className="text-lg font-bold text-gray-900">Q. {faq.q}</h3>
+                  <span className={`text-lg text-gray-400 transition-transform duration-200 ${openIndexes.has(i) ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </button>
+                {openIndexes.has(i) && (
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <p className="leading-relaxed" style={{fontSize: '20px'}}>
+                      <span className="text-gray-700">A. </span>
+                      <span style={{color: '#14B8A6'}}>{faq.a}</span>
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

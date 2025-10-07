@@ -16,7 +16,7 @@ export default function Hero(){
             会話が変わる。関係が変わる。毎日が動き出す。
           </h1>
           <p className="text-3xl lg:text-5xl font-bold" style={{color: '#0F172A'}}>
-            HAPPISCH（ハピスク）
+            HAPPISCH（ハピスク・はぴすく）
           </p>
         </div>
 

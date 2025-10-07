@@ -3,8 +3,15 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "ハピスク（HAPPISCH）",
-    "alternateName": "HAPPISCH",
-    "description": "ファシリテーションを通じて会話・関係・学びを変えていくスクール",
+    "alternateName": [
+      "HAPPISCH",
+      "はぴすく",
+      "ﾊﾋﾟｽｸ",
+      "ハピスク",
+      "ハピオブ スクール",
+      "ファシリテーションスクール ハピスク"
+    ],
+    "description": "ファシリテーションを通じて会話・関係・学びを変えていくスクール。オンライン・対面で受講可能。",
     "url": "https://happisch.com",
     "logo": "https://happisch.com/logo.png",
     "sameAs": [],
@@ -37,7 +44,20 @@ export default function StructuredData() {
       "@type": "Offer",
       "description": "無料説明会",
       "url": "https://forms.gle/2hrPf8UR7rpYcK718"
-    }
+    },
+    "keywords": [
+      "ハピスク",
+      "HAPPISCH",
+      "はぴすく",
+      "ﾊﾋﾟｽｸ",
+      "ファシリテーション",
+      "ファシリテーター",
+      "オンラインスクール",
+      "リカレント教育",
+      "大人の学び",
+      "コミュニケーション",
+      "対話力"
+    ]
   };
 
   return (
