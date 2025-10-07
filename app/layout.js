@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://happisch.com" />
         <link rel="alternate" type="application/rss+xml" title="ハピスク RSS" href="/rss.xml" />
         <link rel="icon" href="data:," />
+        <meta name="theme-color" content="transparent" />
       </head>
       <body className={`${poppins.variable} ${inter.variable} ${notoSansJP.variable} ${geistMono.variable} antialiased`} style={{fontFamily: 'var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif'}}>
         {children}
