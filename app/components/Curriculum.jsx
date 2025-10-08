@@ -4,7 +4,7 @@ export default function Curriculum(){
     {
       title: 'ファシリテーターA\n【合意形成・リレーションシップ】',
       week: '第1週',
-      desc: '実践的な場づくり・対話の深化・合意形成スキルの習得',
+      desc: '実践的な場づくり・対話力の深化・合意形成スキルの習得',
       goal: '白熱する対話の型を習得',
       color: 'from-pink-500 to-pink-600',
       bgColor: '#fdf2f8',
@@ -13,7 +13,7 @@ export default function Curriculum(){
     {
       title: 'ファシリテーターB\n【アイデア・共創】',
       week: '第2週',
-      desc: '場づくり・聴く力・問い方・意見の引き出し／白熱する対話の型を習得',
+      desc: '場づくり・聴く力・問い方・意見の引き出し／白熱する対話力の型を習得',
       goal: '実践的ファシリテーション力を習得',
       color: 'from-pink-600 to-pink-700',
       bgColor: '#fdf2f8',

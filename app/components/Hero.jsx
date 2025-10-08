@@ -13,10 +13,12 @@ export default function Hero(){
         {/* Main title centered */}
         <div className="text-center mb-12">
           <h1 className="text-3xl lg:text-5xl font-bold mb-4" style={{color: '#0F172A'}}>
-            会話が変わる。関係が変わる。毎日が動き出す。
+            {/* added keyword: 対話力 */}
+            対話力で会話が変わる。関係が変わる。毎日が動き出す。
           </h1>
           <p className="text-3xl lg:text-5xl font-bold" style={{color: '#0F172A'}}>
-            HAPPISCH（ハピスク・はぴすく）
+            {/* added keyword: ファシリテーション */}
+            ファシリテーション・スクール HAPPISCH（ハピスク・はぴすく）
           </p>
         </div>
 
@@ -37,12 +39,14 @@ export default function Hero(){
               </div>
               
               <p>
-                <strong style={{color: '#EC4899'}}>「ファシリテーター」の存在が、</strong><br/>
+                {/* added keyword: 対話型リーダーシップ */}
+                <strong style={{color: '#EC4899'}}>「対話型リーダーシップ」とファシリテーターの存在が、</strong><br/>
                 会話や対話の行き詰まりを解きます。
               </p>
               
               <p>
-                ハピスクは、理論と実践で身につける本格的なカリキュラムで、会社・家庭・学校・地域など、あらゆる場面で活かせるファシリテーション力の習得を目指します。
+                {/* added keyword: ファシリテーションとは, 研修 */}
+                ハピスクは、ファシリテーションとは何かを理論と実践で身につける本格的なカリキュラムで、会社・家庭・学校・地域など、あらゆる場面で活かせるファシリテーション研修を提供します。
               </p>
             </div>
             

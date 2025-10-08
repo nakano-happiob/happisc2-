@@ -4,9 +4,11 @@ export default function Program(){
     <section id="program" className="section-space" style={{background: '#fafafa'}}>
       <div className="container-live">
         <div className="text-center mb-section">
-          <h2 className="title-lg">学習コースについて</h2>
+          {/* added keyword: ファシリテーション研修 */}
+          <h2 className="title-lg">ファシリテーション研修コースについて</h2>
           <p className="text-unified content-width" style={{color: 'var(--text-muted)'}}>
-            あなたの学習スタイルに合わせた柔軟なプログラム設計
+            {/* added keyword: 対話力 */}
+            あなたの学習スタイルに合わせた対話力を育む柔軟なプログラム設計
           </p>
         </div>
 
@@ -20,12 +22,14 @@ export default function Program(){
               </div>
               
               <div style={{minHeight: '260px'}}>
+                {/* added keyword: ファシリテーション研修 */}
                 <h3 className="text-3xl font-bold mb-6" style={{textAlign: 'left'}}>アドバンスコース</h3>
                 <p className="text-lg opacity-90 mb-6" style={{textAlign: 'left'}}>
-                  ファシリテーターを目指す方向け
+                  ファシリテーターを目指す方向けの対話力研修
                 </p>
                 <p className="text-base opacity-80 mb-6" style={{textAlign: 'left'}}>
-                  ファシリテーションに加え、専門的な学びで実践力と可能性を広げます
+                  {/* added keyword: ファシリテーションとは */}
+                  ファシリテーションとは何かを理解し、専門的な学びで実践力と可能性を広げます
                 </p>
                 
                 <div className="space-y-3 mb-6" style={{paddingLeft: '16px'}}>

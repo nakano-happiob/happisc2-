@@ -28,20 +28,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'ハピスク（HAPPISCH）｜ファシリテーションで毎日が変わる、関係が動き出す。',
-  description: 'ハピスク（HAPPISCH）は、ファシリテーションを通じて会話・関係・学びを変えていくスクールです。無料説明会お申込受付中。',
-  keywords: 'ハピスク,HAPPISCH,はぴすく,ﾊﾋﾟｽｸ,ハピスク ファシリテーション,ハピスク スクール,ハピスク オンライン,ハピスク 無料説明会,ハピオブ,ファシリテーション,ファシリテーター,コミュニケーション,対話力,会話,関係性,スクール,研修,オンライン,無料説明会,リカレント教育,大人の学び,スキルアップ',
+  title: 'ファシリテーションを学ぶなら｜対話力を育てる実践スクール HAPPISCH',
+  description: 'HAPPISCH（ハピスク）は、対話力・ファシリテーションを学ぶ実践スクール。会議やチームでの対話、アイデア共創、合意形成に活かせる力を理論と実践で育てます。無料説明会開催中。',
+  keywords: 'ファシリテーション,対話力,対話,研修,ファシリテーションとは,対話型リーダーシップ,ハピスク,HAPPISCH,はぴすく,ﾊﾋﾟｽｸ,ファシリテーション スクール,対話力 研修,ファシリテーター,コミュニケーション,会話,関係性,スクール,オンライン,無料説明会,リカレント教育,大人の学び,スキルアップ',
   openGraph: {
-    title: 'ハピスク（HAPPISCH）｜ファシリテーションで毎日が変わる、関係が動き出す。',
-    description: 'ハピスク（HAPPISCH）は、ファシリテーションを通じて会話・関係・学びを変えていくスクールです。無料説明会お申込受付中。',
+    title: 'ファシリテーションを学ぶなら｜対話力を育てる実践スクール HAPPISCH',
+    description: 'HAPPISCH（ハピスク）は、対話力・ファシリテーションを学ぶ実践スクール。会議やチームでの対話、アイデア共創、合意形成に活かせる力を理論と実践で育てます。無料説明会開催中。',
     type: 'website',
     url: 'https://happisch.com',
     siteName: 'ハピスク（HAPPISCH）',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ハピスク（HAPPISCH）｜ファシリテーションで毎日が変わる、関係が動き出す。',
-    description: 'ハピスク（HAPPISCH）は、ファシリテーションを通じて会話・関係・学びを変えていくスクールです。無料説明会お申込受付中。',
+    title: 'ファシリテーションを学ぶなら｜対話力を育てる実践スクール HAPPISCH',
+    description: 'HAPPISCH（ハピスク）は、対話力・ファシリテーションを学ぶ実践スクール。会議やチームでの対話、アイデア共創、合意形成に活かせる力を理論と実践で育てます。無料説明会開催中。',
   },
   alternates: {
     canonical: 'https://happisch.com'
@@ -67,6 +67,30 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="application/rss+xml" title="ハピスク RSS" href="/rss.xml" />
         <link rel="icon" href="data:," />
         <meta name="theme-color" content="transparent" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": "ファシリテーション・スクール HAPPISCH",
+              "description": "対話力・ファシリテーションを学ぶ実践スクール。会議やチームでの対話、アイデア共創、合意形成に活かせる力を理論と実践で育てます。",
+              "provider": {
+                "@type": "Organization",
+                "name": "合同会社ハピオブ"
+              },
+              "courseMode": "オンライン・対面",
+              "inLanguage": "ja",
+              "url": "https://happisch.com",
+              "offers": {
+                "@type": "Offer",
+                "description": "無料説明会",
+                "url": "https://forms.gle/2hrPf8UR7rpYcK718"
+              },
+              "keywords": ["ファシリテーション", "対話力", "対話", "研修", "ファシリテーションとは", "対話型リーダーシップ"]
+            })
+          }}
+        />
       </head>
       <body className={`${poppins.variable} ${inter.variable} ${notoSansJP.variable} ${geistMono.variable} antialiased`} style={{fontFamily: 'var(--font-poppins), var(--font-inter), var(--font-noto), "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif'}}>
         {children}
