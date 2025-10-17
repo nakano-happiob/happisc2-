@@ -1,11 +1,6 @@
 export default function FirstTermSchedule(){
   return (
-    <section className="py-16 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-blue-200 to-teal-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-56 h-56 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-20 blur-3xl"></div>
-      </div>
+    <section className="py-16 bg-transparent relative overflow-hidden">
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">

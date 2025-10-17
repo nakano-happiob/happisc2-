@@ -1,14 +1,14 @@
 export default function Program(){
 
   return (
-    <section id="program" className="section-space" style={{background: '#fafafa'}}>
+    <section id="program" className="section-space bg-transparent">
       <div className="container-live">
         <div className="text-center mb-section">
           {/* added keyword: ファシリテーション研修 */}
-          <h2 className="title-lg">ファシリテーション研修コースについて</h2>
+          <h2 className="title-lg">学習コースについて</h2>
           <p className="text-unified content-width" style={{color: 'var(--text-muted)'}}>
             {/* added keyword: 対話力 */}
-            あなたの学習スタイルに合わせた対話力を育む柔軟なプログラム設計
+            目的に合わせた柔軟なコース選択が可能です
           </p>
         </div>
 
@@ -16,7 +16,7 @@ export default function Program(){
         <div className="content-width-wide">
           <div className="grid-fixed cols-2">
             {/* ベーシックコース */}
-            <div className="relative bg-gradient-to-br from-teal-500 to-teal-600 rounded-3xl text-white shadow-2xl" style={{padding: '24px'}}>
+            <div className="relative bg-teal-500 rounded-3xl text-white shadow-2xl" style={{padding: '24px'}}>
               <div className="absolute top-6 right-6 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
                 おすすめ
               </div>

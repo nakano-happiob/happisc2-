@@ -71,7 +71,7 @@ export default function Curriculum(){
   ];
   
   return (
-    <section id="curriculum" className="section-space bg-white">
+    <section id="curriculum" className="section-space bg-transparent">
       <div className="container-live">
         <div className="text-center mb-section">
           <h2 className="title-lg">カリキュラム</h2>
@@ -106,7 +106,7 @@ export default function Curriculum(){
                     
                     <div className="flex-1 pt-6 md:pt-2">
                       <div className="flex items-start mb-2 md:mb-3">
-                        <div className={`w-3 h-3 bg-gradient-to-r ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
+                        <div className={`w-3 h-3 ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
                         <h4 className="text-sm md:text-lg break-words" style={{
                           color: '#0F172A',
                           fontWeight: '900',
@@ -155,7 +155,7 @@ export default function Curriculum(){
                     
                     <div className="flex-1 pt-6 md:pt-2">
                       <div className="flex items-start mb-2 md:mb-3">
-                        <div className={`w-3 h-3 bg-gradient-to-r ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
+                        <div className={`w-3 h-3 ${subject.color} rounded-full mr-3 flex-shrink-0 mt-1`}></div>
                         <h4 className="text-sm md:text-lg break-words" style={{
                           color: '#0F172A',
                           fontWeight: '900',

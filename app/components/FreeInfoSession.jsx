@@ -1,16 +1,11 @@
 export default function FreeInfoSession(){
   return (
-    <section className="py-16 bg-gradient-to-br from-pink-50 to-white relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-56 h-56 bg-gradient-to-br from-teal-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
-      </div>
+    <section className="py-16 bg-transparent relative overflow-hidden">
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6" style={{color: '#0F172A'}}>
-            10月開催 無料説明会
+            11月開催 無料説明会
           </h2>
           <p className="text-lg mb-8" style={{color: '#475569'}}>
             まずは気軽にオンラインでご参加ください。
@@ -27,30 +22,30 @@ export default function FreeInfoSession(){
               <br/>
               <div className="space-y-4">
                  <div className="flex items-start">
-                   <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                   <div className="w-3 h-3 bg-pink-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
                    <div>
-                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>10月4日（土）</p>
-                     <p className="text-lg" style={{color: '#475569'}}>9:15〜10:15 「ファシリテーション」</p>
-                   </div>
-                 </div>
-                 <div className="flex items-start">
-                   <div className="w-3 h-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                   <div>
-                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>10月4日（土）</p>
-                     <p className="text-lg" style={{color: '#475569'}}>10:30〜11:30 「フィジカルトレーナー」</p>
-                   </div>
-                 </div>
-                 <div className="flex items-start">
-                   <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
-                   <div>
-                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>10月16日（水）</p>
+                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>11月6日（木）</p>
                      <p className="text-lg" style={{color: '#475569'}}>18:45〜19:45 「ファシリテーション」</p>
                    </div>
                  </div>
                  <div className="flex items-start">
-                   <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                   <div className="w-3 h-3 bg-teal-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
                    <div>
-                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>10月16日（水）</p>
+                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>11月6日（木）</p>
+                     <p className="text-lg" style={{color: '#475569'}}>20:00〜21:00 「フィジカルトレーナー」</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start">
+                   <div className="w-3 h-3 bg-purple-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                   <div>
+                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>11月20日（木）</p>
+                     <p className="text-lg" style={{color: '#475569'}}>18:45〜19:45 「ファシリテーション」</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start">
+                   <div className="w-3 h-3 bg-blue-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                   <div>
+                     <p className="text-2xl font-semibold" style={{color: '#0F172A'}}>11月20日（木）</p>
                      <p className="text-lg" style={{color: '#475569'}}>20:00〜21:00 「フィジカルトレーナー」</p>
                    </div>
                  </div>

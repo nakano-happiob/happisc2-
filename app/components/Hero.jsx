@@ -2,30 +2,21 @@
 
 export default function Hero(){
   return (
-    <section id="hero" className="py-20 bg-gradient-to-br from-white via-blue-50 to-teal-50 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-teal-200 to-blue-200 rounded-full opacity-30 blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-30 blur-3xl"></div>
-      </div>
+    <section id="hero" className="py-20 bg-transparent relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main title centered */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-4" style={{color: '#0F172A'}}>
-            {/* added keyword: 対話力 */}
-            対話力で会話が変わる。関係が変わる。毎日が動き出す。
-          </h1>
-          <p className="text-3xl lg:text-5xl font-bold" style={{color: '#0F172A'}}>
-            {/* added keyword: ファシリテーション */}
-            ファシリテーション・スクール HAPPISCH（ハピスク・はぴすく）
-          </p>
-        </div>
-
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left: Text content */}
           <div className="space-y-6">
+            {/* Main title left-aligned */}
+            <div className="text-left mb-8 w-full">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4" style={{color: '#0F172A'}}>
+                <span className="whitespace-nowrap" style={{color: '#0F172A', fontWeight: 'bold'}}>会話が変わる。関係が変わる。</span><br/>
+                <span className="whitespace-nowrap" style={{color: '#0F172A', fontWeight: 'bold'}}>毎日が動き出す。</span><br/>
+                <span style={{color: '#14B8A6', fontWeight: 'bold'}}>HAPPISCH（ハピスク）</span>
+              </h1>
+            </div>
             <div className="space-y-4" style={{fontSize: '20px', lineHeight: '1.6'}}>
               <p>
                 <span style={{color: '#14B8A6', fontWeight: 'bold'}}>ファシリテーション</span>で<br/>
@@ -39,14 +30,12 @@ export default function Hero(){
               </div>
               
               <p>
-                {/* added keyword: 対話型リーダーシップ */}
-                <strong style={{color: '#EC4899'}}>「対話型リーダーシップ」とファシリテーターの存在が、</strong><br/>
+                <strong style={{color: '#EC4899'}}>ファシリテーターの存在が、</strong><br/>
                 会話や対話の行き詰まりを解きます。
               </p>
               
               <p>
-                {/* added keyword: ファシリテーションとは, 研修 */}
-                ハピスクは、ファシリテーションとは何かを理論と実践で身につける本格的なカリキュラムで、会社・家庭・学校・地域など、あらゆる場面で活かせるファシリテーション研修を提供します。
+                ハピスクは、ファシリテーションを中心とした多角的なカリキュラムを通して、会社・家庭・学校・地域など、いかなる場面でも自分の可能性を信じられる人を増やします。
               </p>
             </div>
             
@@ -59,7 +48,7 @@ export default function Hero(){
 
           {/* Right: Image */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-teal-100 to-blue-100">
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-transparent">
               <img 
                 src="/top2.jpg" 
                 alt="ハピスクでのファシリテーション学習風景" 
@@ -69,9 +58,9 @@ export default function Hero(){
                   e.target.nextSibling.style.display = 'flex';
                 }}
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-100 to-blue-100" style={{display: 'none'}}>
+              <div className="absolute inset-0 flex items-center justify-center bg-transparent" style={{display: 'none'}}>
                 <div className="text-center text-gray-600">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-teal-200 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📚</span>
                   </div>
                   <p className="text-lg font-medium">ファシリテーション学習</p>

@@ -1,6 +1,6 @@
 export default function AboutCompany(){
   return (
-    <section id="about-company" className="section-space bg-white">
+    <section id="about-company" className="section-space bg-transparent">
       <div className="container-live">
         <div className="text-center mb-section">
           <h2 className="title-lg">ハピオブについて</h2>

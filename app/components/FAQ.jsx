@@ -41,7 +41,7 @@ export default function FAQ(){
   };
   
   return (
-    <section id="faq" className="section-space bg-white">
+    <section id="faq" className="section-space bg-transparent">
       <div className="container-live">
         <div className="text-center mb-section">
           <h2 className="title-lg">よくある質問</h2>

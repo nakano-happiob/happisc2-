@@ -1,11 +1,6 @@
 export default function Closing(){
   return (
-    <section id="closing" className="section-space text-center relative overflow-hidden" style={{background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)'}}>
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-teal-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
-      </div>
+    <section id="closing" className="section-space text-center relative overflow-hidden bg-transparent">
 
       <div className="container-live relative z-10">
         <div className="content-width">

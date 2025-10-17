@@ -96,37 +96,37 @@ export default function Benefits(){
       title: "「学習歴」に着目",
       subtitle: "あなただけの学習記録",
       desc: "受講した背景や目指す姿に合わせ、あなたの「学習歴」を残します",
-      color: "bg-gradient-to-br from-pink-500 to-pink-600",
-      bgColor: "bg-pink-50"
+      color: "bg-pink-500",
+      bgColor: "bg-transparent"
     },
     {
       number: "02", 
       title: "柔軟な受講形式",
       subtitle: "ライフスタイルに合わせて",
-      desc: "対面・オンライン であなたのライフスタイルに合わせて選択",
-      color: "bg-gradient-to-br from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50"
+      desc: "オンライン中心であなたのライフスタイルに合わせて受講できます",
+      color: "bg-orange-500",
+      bgColor: "bg-transparent"
     },
     {
       number: "03",
       title: "少人数制カリキュラム",
       subtitle: "一人ひとりに丁寧な指導",
       desc: "一人ひとりに目が届く人数で丁寧な指導を受けられます。",
-      color: "bg-gradient-to-br from-teal-500 to-teal-600", 
-      bgColor: "bg-teal-50"
+      color: "bg-teal-500", 
+      bgColor: "bg-transparent"
     },
     {
       number: "04",
       title: "フォロー制度",
       subtitle: "継続的なサポート体制",
       desc: "カリキュラムや受講終了後の個別相談も可能です。",
-      color: "bg-gradient-to-br from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50"
+      color: "bg-purple-500",
+      bgColor: "bg-transparent"
     }
   ];
 
   return (
-    <section id="benefits" className="section-space bg-gradient">
+    <section id="benefits" className="section-space bg-transparent">
       <div className="container-live">
         <div className="text-center mb-section">
           <h2 className="title-lg">ハピスクの特徴</h2>

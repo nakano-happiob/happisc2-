@@ -74,13 +74,7 @@ export default function UseCases(){
   ];
   
   return (
-    <section id="usecases" className="section-space relative overflow-hidden" 
-             style={{background: 'linear-gradient(135deg, var(--brand-teal-soft) 0%, #ffffff 30%, var(--brand-pink-soft) 100%)'}}>
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 right-20 w-96 h-96 bg-gradient-to-br from-teal-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
-      </div>
+    <section id="usecases" className="section-space relative overflow-hidden bg-transparent">
 
       <div className="container-live relative z-10">
         <div className="text-center mb-16">
